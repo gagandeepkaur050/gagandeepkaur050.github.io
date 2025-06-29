@@ -10,7 +10,7 @@ const Resume = () => (
     boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
     fontFamily: 'Segoe UI, sans-serif'
   }}>
-    <h2 style={{ color: '#004aad', borderBottom: '2px solid #eee', paddingBottom: '10px' }}>Resume</h2>
+    <h2>Resume</h2>
 
     {/* Professional Experience */}
     <div style={{ marginBottom: '30px' }}>
@@ -53,7 +53,7 @@ const Resume = () => (
         display: 'inline-block',
         marginTop: '20px',
         padding: '10px 20px',
-        backgroundColor: '#004aad',
+        backgroundColor: '#85593f',
         color: '#fff',
         textDecoration: 'none',
         borderRadius: '5px',

@@ -1,6 +1,6 @@
 // src/components/Footer.js
 import React from 'react';
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaGithub, FaLinkedin,FaEnvelope } from 'react-icons/fa';
 
 const Footer = () => {
   return (
@@ -30,7 +30,16 @@ const Footer = () => {
         >
           <FaLinkedin />
         </a>
+        <a
+          href="mailto:09gagandeep1996@gmail.com"
+          style={{ margin: '0 15px', color: '#d44638', fontSize: '1.5rem' }}
+        >
+          <FaEnvelope />
+        </a>
       </div>
+      <p style={{ fontSize: '14px', marginTop: '10px' }}>
+        Email: <a href="mailto:09gagandeep1996@gmail.com" style={{ color: '#333' }}>09gagandeep1996@gmail.com</a>
+      </p>
       <p style={{ fontSize: '14px', marginTop: '10px' }}>
         © {new Date().getFullYear()} Gagandeep Kaur | All rights reserved.
       </p>
