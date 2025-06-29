@@ -1,43 +1,33 @@
-import React from "react";
-import "./App.css";
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom';
+import Home from './pages/Home';
+import Skills from './pages/Skills';
+import Education from './pages/Education';
+import Experience from './pages/Experience';
+import './App.css';  // Add this CSS file
 
 function App() {
   return (
-    <div className="container">
-      <header>
-        <h1>Gagandeep Kaur</h1>
-        <p>Quality Assurance & Frontend Enthusiast</p>
-        <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="btn">
-          Download Resume
-        </a>
+    <Router>
+      <header className="navbar">
+        <img src="/logo1.png" alt="Gagandeep Logo" className="logo" />
+        <nav>
+          <NavLink to="/" className={({ isActive }) => isActive ? "active" : ""}>Home</NavLink>
+          <NavLink to="/skills" className={({ isActive }) => isActive ? "active" : ""}>Skills</NavLink>
+          <NavLink to="/education" className={({ isActive }) => isActive ? "active" : ""}>Education</NavLink>
+          <NavLink to="/experience" className={({ isActive }) => isActive ? "active" : ""}>Experience</NavLink>
+        </nav>
       </header>
 
-      <section>
-        <h2>About Me</h2>
-        <p>
-          I’m a motivated team player with experience in Quality Assurance, warehouse operations, and customer service. I'm currently building my portfolio while learning web development and React.
-        </p>
-      </section>
-
-      <section>
-        <h2>Projects</h2>
-        <ul>
-          <li>
-            <strong>FitBuddy App</strong> – Cross-platform fitness app with React Native + Firebase.
-          </li>
-          <li>
-            <strong>Portfolio Site</strong> – Built using React, deployed with GitHub Pages.
-          </li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>Contact</h2>
-        <p>
-          Email me at: <a href="mailto:gagandeep@example.com">gagandeep@example.com</a>
-        </p>
-      </section>
-    </div>
+      <main className="content">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/skills" element={<Skills />} />
+          <Route path="/education" element={<Education />} />
+          <Route path="/experience" element={<Experience />} />
+        </Routes>
+      </main>
+    </Router>
   );
 }
 

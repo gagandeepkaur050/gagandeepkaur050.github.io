@@ -1,38 +1,54 @@
 body {
-  font-family: sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
-  padding: 0;
-  background: #f4f4f4;
+  background-color: #f9f9f9;
+  color: #333;
 }
 
-.container {
-  max-width: 800px;
-  margin: 40px auto;
+.navbar {
+  background-color: #004aad; /* Deep blue */
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 30px;
+}
+
+nav a {
+  color: white;
+  margin-right: 1.5rem;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+nav a.active {
+  border-bottom: 2px solid #ffd700; /* gold highlight */
+}
+
+.content {
+  max-width: 900px;
+  margin: 2rem auto;
   background: white;
   padding: 2rem;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
+  box-shadow: 0 4px 6px rgb(0 0 0 / 0.1);
 }
 
-header {
-  text-align: center;
-  margin-bottom: 2rem;
+/* Optional: Style headings and paragraphs */
+h1, h2, h3 {
+  color: #004aad;
 }
 
-.btn {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.5rem 1rem;
-  background: #007bff;
-  color: white;
-  text-decoration: none;
-  border-radius: 4px;
-}
-
-section {
-  margin-top: 2rem;
-}
-
-h2 {
-  color: #333;
+p, ul {
+  line-height: 1.6;
 }
