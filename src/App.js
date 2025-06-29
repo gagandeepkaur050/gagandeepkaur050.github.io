@@ -6,10 +6,12 @@ import Education from './pages/Education';
 import Experience from './pages/Experience';
 import './App.css';  // Add this CSS file
 import Resume from './pages/Resume';
-
+import Footer from './components/Footer'; 
 function App() {
   return (
     <Router>
+            <div className="App" style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+
       <header className="navbar">
         <img src="/logo1.png" alt="Gagandeep Logo" className="logo" />
         <nav>
@@ -32,7 +34,10 @@ function App() {
 
         </Routes>
       </main>
+      <Footer />
+      </div>
     </Router>
+    
   );
 }
 
