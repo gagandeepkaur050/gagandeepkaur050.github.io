@@ -5,6 +5,7 @@ import Skills from './pages/Skills';
 import Education from './pages/Education';
 import Experience from './pages/Experience';
 import './App.css';  // Add this CSS file
+import Resume from './pages/Resume';
 
 function App() {
   return (
@@ -16,6 +17,8 @@ function App() {
           <NavLink to="/skills" className={({ isActive }) => isActive ? "active" : ""}>Skills</NavLink>
           <NavLink to="/education" className={({ isActive }) => isActive ? "active" : ""}>Education</NavLink>
           <NavLink to="/experience" className={({ isActive }) => isActive ? "active" : ""}>Experience</NavLink>
+          <NavLink to="/resume" className={({ isActive }) => isActive ? "active" : ""}>Resume</NavLink>
+
         </nav>
       </header>
 
@@ -25,6 +28,8 @@ function App() {
           <Route path="/skills" element={<Skills />} />
           <Route path="/education" element={<Education />} />
           <Route path="/experience" element={<Experience />} />
+          <Route path="/resume" element={<Resume />} />
+
         </Routes>
       </main>
     </Router>
